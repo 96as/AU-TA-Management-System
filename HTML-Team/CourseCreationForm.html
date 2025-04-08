@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment Form</title>
+</head>
+<body>
+
+    <h1>Course Creation Form</h1>
+    <form id="CourseCreationForm" action="#" method="post">
+        <label for="course">Choose Course:</label>
+        <select name="course" required>
+            <option value="" disabled selected>  </option>
+            <option value="course1">Data Structures and Algorthims</option>
+            <option value="course2">Software Requirements</option>
+            <option value="course3">Operating Systems</option>    
+        </select>
+
+        <label for="instructor">Choose Instructor:</label>
+        <select name="instructor" required>
+            <option value="" disabled selected>  </option>
+            <option value="instructor1">Safia Dawoud</option>
+            <option value="instructor2">Safia Yasmeen</option>
+            <option value="instructor3">Taghreed Altamimi</option>
+        </select>
+
+        <label for="courseCode">Choose Course Code:</label>
+        <select name="courseCode" required>
+            <option value="" disabled selected>  </option>
+            <option value="coursecode1">SE214</option>
+            <option value="coursecode2">SE225</option>
+            <option value="coursecode3">SE314</option>
+        </select>
+
+        <label for="enrolledStudents">Number of Students Enrolled:</label>
+        <input type="number" id="enrolledStudents" name="enrolledStudents" min="1" max="100" step="1" required>
+        <img src="https://yt3.ggpht.com/a/AGF-l7-B1MoykDFAHDRm6stJIOXGZUL_27inMLGRXQ=s900-c-k-c0xffffffff-no-rj-mo" alt="Logo" class="logo" width="150" height="150">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
