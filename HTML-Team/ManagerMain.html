@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
   <title>TA Management</title>
+
+  <!-- this is for importing icons like the profile icon and calendar one -->
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="MainPagesStyle.css">   
+  <script src="MainPagesScript.js" defer></script>
 </head>
+
+
 <body>
 <div class="app-wrap">
   <div class="app-inner">
@@ -22,11 +29,11 @@
 
           <div class="only-full">
             <div class="divider"></div>
-            <a class="nav-item" href="/student/profile">
+            <a class="nav-item" href="/student/profile"> <!-- Add connection to profile here -->
               <div class="nav-prepend"><i class="mdi mdi-account-circle"></i></div>
               <div><div>Profile</div></div>
             </a>
-            <a class="nav-item logout" href="/logout">
+            <a class="nav-item logout" href="/logout"> <!-- Takes you to the login page and puts a popup screen says "successfully logged out" -->
               <div class="nav-prepend"><i class="mdi mdi-logout"></i></div>
               <div><div>Log Out</div></div>
             </a>
@@ -39,9 +46,9 @@
           <h2>TA Management</h2>
         </div>
         <ul class="breadcrumbs">
-          <li><a href="/">Manager Panel</a></li>
+          <li><a href="/">Manager Panel</a></li>  <!-- add refence page check with salama if needed-->
         </ul>
-        <hr class="divider">
+        <hr class="divider divider-bottom-margin">
 
         <div class="cards">
           <div class="card">
@@ -50,8 +57,8 @@
                 <p class="text-lg">Create Course</p>
                 <p class="text-sub">College of Engineering</p>
               </div>
-              <div class="status">
-                <i class="mdi mdi-clock"></i>
+              <div class="status-indicator">
+                <i class="mdi mdi-clock status-icon"></i>
                 <p class="text-xs">Up to Date</p>
               </div>
             </div>
@@ -63,9 +70,9 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="validity">
-                <i class="mdi mdi-calendar-range"></i>
-                <p class="text-xs">Valid Until: 2025-05-30</p>
+              <div class="date-container">
+                <i class="mdi mdi-calendar-range calendar-icon"></i>
+                <p class="text-xs date-text">Valid Until: 2025-05-30</p>
               </div>
               <button class="btn-details">Details</button>
             </div>
@@ -77,8 +84,8 @@
                 <p class="text-lg">Assign TA</p>
                 <p class="text-sub">College of Engineering</p>
               </div>
-              <div class="status">
-                <i class="mdi mdi-clock"></i>
+              <div class="status-indicator">
+                <i class="mdi mdi-clock status-icon"></i>
                 <p class="text-xs">Up to Date</p>
               </div>
             </div>
@@ -90,9 +97,9 @@
               </div>
             </div>
             <div class="card-footer">
-              <div class="validity">
-                <i class="mdi mdi-calendar-range"></i>
-                <p class="text-xs">Valid Until: 2025-05-30</p>
+              <div class="date-container">
+                <i class="mdi mdi-calendar-range calendar-icon"></i>
+                <p class="text-xs date-text">Valid Until: 2025-05-30</p>
               </div>
               <button class="btn-details">Details</button>
             </div>
