@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA Assignment Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select, input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #2a28a7;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        @media (max-width: 600px) {
+            form {
+                width: 100%;
+                padding: 10px;
+            }
+            select, input[type="number"] {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <form id="TaAssignmentForm" action="#" method="post">
+        <img src="https://yt3.ggpht.com/a/AGF-l7-B1MoykDFAHDRm6stJIOXGZUL_27inMLGRXQ=s900-c-k-c0xffffffff-no-rj-mo" alt="Logo" class="logo" width="150" height="150">
+        <h1>TA Assignment Form</h1>
+        <label for="course">Choose Course:</label>
+        <select name="course" required>
+            <option value="" disabled selected>  </option>
+            <option value="course1">Data Structures and Algorthims</option>
+            <option value="course2">Software Requirements</option>
+            <option value="course3">Operating Systems</option>    
+        </select>
+
+        <label for="TA">Choose TA:</label>
+        <select name="TA" required>
+            <option value="" disabled selected>  </option>
+            <option value="TA1">Abdulrahman Raad</option>
+            <option value="instructor2">Mohammed Deri</option>
+            <option value="instructor3">Ahmed Fares</option>
+        </select>
+
+        <label for="TA total assigned hours">Total assigned hours:</label>
+        <input type="number" id="TA total assigned hours" name="TA total assigned hours" min="1" max="18" step="1" required>
+
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
