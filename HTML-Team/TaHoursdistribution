@@ -1,0 +1,51 @@
+<html>
+
+<div>
+<table>   
+<tr>
+<td>   
+<label>TA name:</label>  
+</td>     
+<td>
+<select name="Task" required>
+    <option value="" disabled selected>  </option>
+    <option value="Task1">Lab/Tutorial Supervision</option>
+    <option value="Tak2">Marking</option>
+    <option value="Task3">Proctoring</option>
+</select>
+<input type="number" id="number of hours" name="number of hours" min="1" max="18" step="1" required>
+</td>
+</tr> 
+
+<tr>
+<td>    
+<label>TA name:</label>
+</td> 
+<td>   
+<select name="Task" required>
+    <option value="" disabled selected>  </option>
+    <option value="Task1">Lab/Tutorial Supervision</option>
+    <option value="Tak2">Marking</option>
+    <option value="Task3">Proctoring</option>
+</select>
+<input type="number" id="number of hours" name="number of hours" min="1" max="18" step="1" required>
+</td> 
+</tr>
+
+<tr>
+<td>     
+<label>TA name:</label>  
+</td> 
+<td> 
+<select name="Task" required>
+    <option value="" disabled selected>  </option>
+    <option value="Task1">Lab/Tutorial Supervision</option>
+    <option value="Tak2">Marking</option>
+    <option value="Task3">Proctoring</option>
+</select>
+<input type="number" id="number of hours" name="number of hours" min="1" max="18" step="1" required>
+</td> 
+</tr>
+</table>
+</div>
+</html>
