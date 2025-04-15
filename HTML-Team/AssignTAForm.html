@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Enrollment Form</title>
+    <title>TA Assignment Form</title>
 
     <style>
         body {
@@ -58,16 +58,13 @@
             }
         }
     </style>
+
 </head>
 <body>
 
-         
-
-    <form id="CourseCreationForm" action="#" method="post">
+    <form id="TaAssignmentForm" action="#" method="post">
         <img src="https://yt3.ggpht.com/a/AGF-l7-B1MoykDFAHDRm6stJIOXGZUL_27inMLGRXQ=s900-c-k-c0xffffffff-no-rj-mo" alt="Logo" class="logo" width="150" height="150">
-       
-        <h1>Course Creation Form</h1>   
-
+        <h1>TA Assignment Form</h1>
         <label for="course">Choose Course:</label>
         <select name="course" required>
             <option value="" disabled selected>  </option>
@@ -75,30 +72,20 @@
             <option value="course2">Software Requirements</option>
             <option value="course3">Operating Systems</option>    
         </select>
-        
-        <label for="courseCode">Choose Course Code:</label>
-        <select name="courseCode" required>
+
+        <label for="TA">Choose TA:</label>
+        <select name="TA" required>
             <option value="" disabled selected>  </option>
-            <option value="coursecode1">SE214</option>
-            <option value="coursecode2">SE225</option>
-            <option value="coursecode3">SE314</option>
-        </select>
-        
-        <label for="instructor">Choose Instructor:</label>
-        <select name="instructor" required>
-            <option value="" disabled selected>  </option>
-            <option value="instructor1">Safia Dawoud</option>
-            <option value="instructor2">Safia Yasmeen</option>
-            <option value="instructor3">Taghreed Altamimi</option>
+            <option value="TA1">Abdulrahman Raad</option>
+            <option value="instructor2">Mohammed Deri</option>
+            <option value="instructor3">Ahmed Fares</option>
         </select>
 
-        
+        <label for="TA total assigned hours">Total assigned hours:</label>
+        <input type="number" id="TA total assigned hours" name="TA total assigned hours" min="1" max="18" step="1" required>
 
-        <label for="enrolledStudents">Number of Students Enrolled:</label>
-        <input type="number" id="enrolledStudents" name="enrolledStudents" min="1" max="100" step="1" required>
 
-        <button  type="submit">Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
-
