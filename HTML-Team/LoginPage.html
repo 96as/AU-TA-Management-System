@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+<link rel="stylesheet" href="">
 <html>
 <head>
 <style>
@@ -6,7 +8,7 @@
   width: 300px;
   margin: 100px auto;
   padding: 20px;
-  background-color: #f5f5f5;
+  background-color: #10315A;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation-name: fadeInDown;
@@ -25,8 +27,16 @@
   }
 }
 
+html {
+  background-image: url("sparkle-7570854_1920.png"); /* Adjust the path if needed */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+}
+
 #logo {
   width: 100px;
+  margin-left: 80px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -44,8 +54,9 @@
 }
 
 #btn-signin {
-  width: 100%;
-  background-color: #007bff;
+  width: 50%;
+  margin-left:65px;
+  background-color: #0056b3;
   color: white;
   border: none;
   padding: 10px;
@@ -54,7 +65,7 @@
 }
 
 #btn-signin:hover {
-  background-color: #0056b3;
+  background-color: #10315A
 }
 
 #signin .form-group {
@@ -97,6 +108,9 @@
   align-items: center;
 }
 </style>
+
+<script src="Login.js"></script>
+
 </head>
 <body id="signin">
   <main>
@@ -104,21 +118,21 @@
       <div class="container">
         <div id="signinBox">
           <div class="row">
-            <img src="https://eforms.alfaisal.edu/images/logo.png" id="logo" class="img-fluid mx-auto d-block"/>
+            <img src="../Resources/logo copy.png" id="logo" class="img-fluid mx-auto d-block"/>
             <div>
               <h3 id="title">TA Management System</h3>
-              <form method="POST" action="https://eforms.alfaisal.edu/login">
+              <form method="POST" action="#">
                 <div class="form-group row">
                   <div class="input-wrapper">
                     <span class="input-icon">&#128100;</span> <!-- 👤 icon -->
-                    <input id="username" type="text" name="username" required autocomplete="username" placeholder="Your Alfaisal email ID.">
+                    <input id="username" type="text" name="username" placeholder="Your Alfaisal email ID.">
                   </div>
                 </div>
 
                 <div class="form-group row">
                   <div class="input-wrapper">
                     <span class="input-icon">&#128274;</span> <!-- 🔒 icon -->
-                    <input id="password" type="password" name="password" required autocomplete="current-password" placeholder="Your Alfaisal email password.">
+                    <input id="password" type="password" name="password" placeholder="Your Alfaisal email password.">
                   </div>
                 </div>
 
