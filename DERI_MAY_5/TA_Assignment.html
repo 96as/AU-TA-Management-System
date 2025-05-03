@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assign Teaching Assistants</title>
+
+  <!-- Material Design Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../Desktop/SE324%20Porject%20Saves%20(backups)/se324%20save%20full%20C/termproject/style.css">
+  <script src="../../Desktop/SE324%20Porject%20Saves%20(backups)/se324%20save%20full%20C/termproject/script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+
+  <style>
+    .hours-input input.read-only {
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      cursor: not-allowed;
+      color: #666;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 500px;
+      animation: modal-appear 0.3s ease;
+    }
+
+    @keyframes modal-appear {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .modal-header h3 {
+      margin: 0;
+      color: #333;
+    }
+
+    .close-modal {
+      font-size: 24px;
+      cursor: pointer;
+      color: #666;
+      background: none;
+      border: none;
+    }
+
+    .close-modal:hover {
+      color: #333;
+    }
+
+    .modal-body {
+      padding: 20px;
+    }
+
+    .modal-footer {
+      padding: 16px 20px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #4a90e2;
+      outline: none;
+    }
+
+    .distribute-tasks-btn {
+      margin-left: 10px;
+      padding: 6px 12px;
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: background-color 0.2s;
+    }
+
+    .distribute-tasks-btn:hover {
+      background-color: #357abd;
+    }
+
+    .task-field {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .task-field label {
+      font-weight: 500;
+      flex: 1;
+    }
+
+    .task-field input {
+      width: 80px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .hours-summary {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+    }
+
+    .ta-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ta-tasks-summary {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .ta-tasks-summary span {
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+
+    .ta-tasks-summary .task-value {
+      font-weight: 500;
+      color: #4a90e2;
+    }
+    .ta-list {
+      max-height: none !important;
+      overflow: visible !important;
+    }
+    .ta-item {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 15px;
+       border-bottom: 1px solid #eee;
+       background-color: #fff;
+     }
+  </style>
+
+
+</head>
+<body>
+<div class="app-wrap">
+  <div class="app-inner">
+    <main class="main">
+      <div class="drawer drawer-rail" id="sidebar">
+        <div class="drawer-content">
+          <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+            <img src="img/logo.8f8d722a.png" alt=":P fix meeeee" class="logo">
+            <span class="only-full university-name">Alfaisal University</span>
+          </div>
+
+          <div class="divider divider-bottom-margin"></div>
+
+          <a href="manager-dashboard.html" class="nav-item">
+            <div class="nav-prepend">
+              <i class="fas fa-home"></i>
+            </div>
+            <span class="only-full">Dashboard</span>
+          </a>
+
+          <a href="courses-management.html" class="nav-item">
+            <div class="nav-prepend">
+              <i class="fas fa-book"></i>
+            </div>
+            <span class="only-full">Courses</span>
+          </a>
+
+          <a href="ta-management.html" class="nav-item">
+            <div class="nav-prepend">
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="only-full">TA Management</span>
+          </a>
+
+          <a href="reports.html" class="nav-item">
+            <div class="nav-prepend">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <span class="only-full">Reports</span>
+          </a>
+
+          <div class="divider"></div>
+
+          <a href="pageeeee" class="nav-item">
+            <div class="nav-prepend">
+              <i class="mdi mdi-account-circle"></i>
+            </div>
+            <span class="only-full">Profile</span>
+          </a>
+          <a href="login.html" class="nav-item logout">
+            <div class="nav-prepend">
+              <i class="fas fa-sign-out-alt"></i>
+            </div>
+            <span class="only-full">Logout</span>
+          </a>
+        </div>
+
+        <button class="drawer-toggle-btn" id="sidebarToggle">
+          <i class="fas fa-chevron-right" id="toggleIcon"></i>
+        </button>
+      </div>
+
+
+      <div id="main-content" class="main-content">
+        <div class="page-header">
+          <h2>Assign Teaching Assistants</h2>
+        </div>
+        <ul class="breadcrumbs">
+          <li><a href="../../Desktop/SE324%20Porject%20Saves%20(backups)/se324%20save%20full%20C/termproject/InstructorPannel.html">Instructor Panel</a></li>
+          <li><a href="javascript:history.back()">TA Management</a></li>
+          <li>Assign TAs</li>
+        </ul>
+        <hr class="divider divider-bottom-margin">
+
+        <div class="page-actions">
+          <div class="search-bar">
+            <i class="mdi mdi-magnify"></i>
+            <input type="text" placeholder="Search courses...">
+          </div>
+          <a href="../../Desktop/SE324%20Porject%20Saves%20(backups)/se324%20save%20full%20C/termproject/ViewAllCourses.html">
+            <button class="view-all-btn">
+              <i class="mdi mdi-view-list"></i>
+              View All Courses
+            </button>
+          </a>
+        </div>
+
+        <div class="summary-panel">
+          <div class="summary-item">
+            <div class="summary-value">7</div>
+            <div class="summary-label">Total TAs</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">3</div>
+            <div class="summary-label">Courses</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">83</div>
+            <div class="summary-label">Hours/Week</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">14</div>
+            <div class="summary-label">Avg Hours/Week</div>
+          </div>
+        </div>
+
+        <div class="filters">
+          <div class="filter-group">
+            <label>Term:</label>
+            <select>
+              <option>Spring 2025</option>
+              <option>Fall 2024</option>
+              <option>Summer 2024</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Department:</label>
+            <select>
+              <option>All Departments</option>
+              <option>Computer Science</option>
+              <option>Software Engineering</option>
+              <option>Mathematics</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>Year:</label>
+            <select>
+              <option>All Years</option>
+              <option>1st Year</option>
+              <option>2nd Year</option>
+              <option>3rd Year</option>
+              <option>4th Year</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Software Engineering Principles -->
+        <div class="assignment-container">
+          <div class="course-header">
+            <h3>Software Engineering Principles</h3>
+            <div class="status-badge">Assignments In Progress</div>
+          </div>
+
+          <div class="course-subheader">
+            <p><strong>SE 117</strong> | Section 01 | Spring 2025</p>
+            <p>Schedule: Mon/Wed 10:00-11:30 AM | Bg 65 </p>
+          </div>
+
+          <div class="section-title">
+            <span><i class="mdi mdi-account-group"></i> Assigned Teaching Assistants</span>
+            <div class="hours-badge">36 / 40 Hours Used</div>
+          </div>
+
+          <div class="assignment-content">
+            <div class="ta-list" id="se-principles-ta-list">
+              <!-- TA items will be inserted by JavaScript -->
+            </div>
+          </div>
+
+          <div class="assignment-actions">
+            <div>
+              <button class="cancel-btn">Cancel Changes</button>
+              <button class="save-btn">Save Assignments</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database Systems -->
+        <div class="assignment-container">
+          <div class="course-header">
+            <h3>Database Systems</h3>
+            <div class="status-badge">Assignments In Progress</div>
+          </div>
+
+          <div class="course-subheader">
+            <p><strong>SE 210</strong> | Section 02 | Spring 2025</p>
+            <p>Schedule: Tue/Thu 13:00-14:30 PM | LAB</p>
+          </div>
+
+          <div class="section-title">
+            <span><i class="mdi mdi-account-group"></i> Assigned Teaching Assistants</span>
+            <div class="hours-badge">24 / 30 Hours Used</div>
+          </div>
+
+          <div class="assignment-content">
+            <div class="ta-list" id="db-systems-ta-list">
+              <!-- TA items will be inserted by JavaScript -->
+            </div>
+          </div>
+
+          <div class="assignment-actions">
+            <div>
+              <button class="cancel-btn">Cancel Changes</button>
+              <button class="save-btn">Save Assignments</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Application Development -->
+        <div class="assignment-container">
+          <div class="course-header">
+            <h3>Mobile Application Development</h3>
+            <div class="status-badge">Assignments In Progress</div>
+          </div>
+
+          <div class="course-subheader">
+            <p><strong>SE 328</strong> | Section 01 | Spring 2025</p>
+            <p>Schedule: Wed/Fri 15:00-16:30 PM | Lab</p>
+          </div>
+
+          <div class="section-title">
+            <span><i class="mdi mdi-account-group"></i> Assigned Teaching Assistants</span>
+            <div class="hours-badge">23 / 25 Hours Used</div>
+          </div>
+
+          <div class="assignment-content">
+            <div class="ta-list" id="mobile-app-ta-list">
+              <!-- TA items will be inserted by JavaScript -->
+            </div>
+          </div>
+
+          <div class="assignment-actions">
+            <div>
+              <button class="cancel-btn">Cancel Changes</button>
+              <button class="save-btn">Save Assignments</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Task Distribution Modal -->
+<div id="task-modal" class="ta-modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title">Distribute Tasks</div>
+      <button class="close-modal" onclick="closeTaskModal()">×</button>
+    </div>
+    <div class="modal-body" id="modal-body">
+      <!-- Task distribution form will be inserted here -->
+    </div>
+    <div class="modal-footer">
+      <button class="cancel-btn" onclick="closeTaskModal()">Cancel</button>
+      <button class="save-btn" onclick="saveTaskDistribution()">Save</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // TA Data for all courses
+  const allTAData = {
+    "Software Engineering Principles": [
+      {
+        id: 1,
+        name: 'Lara',
+        avatar: 'LA',
+        type: 'Graduate Teaching Assistant',
+        course: 'Software Engineering Principles',
+        totalHours: 15,
+        hours: 15,
+        tasks: {
+          labs: 6,
+          proctoring: 5,
+          correcting: 4
+        }
+      },
+      {
+        id: 2,
+        name: 'Sara',
+        avatar: 'SA',
+        type: 'Undergraduate Teaching Assistant',
+        course: 'Software Engineering Principles',
+        totalHours: 12,
+        hours: 12,
+        tasks: {
+          labs: 4,
+          proctoring: 3,
+          correcting: 3
+        }
+      },
+      {
+        id: 3,
+        name: 'Mohamad',
+        avatar: 'MAD',
+        type: 'Graduate Teaching Assistant',
+        course: 'Software Engineering Principles',
+        totalHours: 9,
+        hours: 9,
+        tasks: {
+          labs: 3,
+          proctoring: 2,
+          correcting: 2
+        }
+      }
+    ],
+    "Database Systems": [
+      {
+        id: 4,
+        name: 'Ahmad',
+        avatar: 'AD',
+        type: 'Graduate Teaching Assistant',
+        course: 'Database Systems',
+        totalHours: 14,
+        hours: 14,
+        tasks: {
+          labs: 5,
+          proctoring: 4,
+          correcting: 3
+        }
+      },
+      {
+        id: 5,
+        name: 'David',
+        avatar: 'DD',
+        type: 'Undergraduate Teaching Assistant',
+        course: 'Database Systems',
+        totalHours: 10,
+        hours: 10,
+        tasks: {
+          labs: 4,
+          proctoring: 2,
+          correcting: 2
+        }
+      }
+    ],
+    "Mobile Application Development": [
+      {
+        id: 6,
+        name: 'Aisha',
+        avatar: 'AA',
+        type: 'Graduate Teaching Assistant',
+        course: 'Mobile Application Development',
+        totalHours: 15,
+        hours: 15,
+        tasks: {
+          labs: 6,
+          proctoring: 3,
+          correcting: 3
+        }
+      },
+      {
+        id: 7,
+        name: 'James',
+        avatar: 'JS',
+        type: 'Graduate Teaching Assistant',
+        course: 'Mobile Application Development',
+        totalHours: 8,
+        hours: 8,
+        tasks: {
+          labs: 3,
+          proctoring: 2,
+          correcting: 2
+        }
+      }
+    ]
+  };
+
+  // Current TA being edited
+  let currentTA = null;
+
+  // Render TAs for a specific course
+  // Updated renderTAs function to show TAs without scrolling
+  // Updated renderTAs function to show TAs without scrolling
+  function renderTAs(courseTitle, containerId) {
+    const taData = allTAData[courseTitle];
+    const container = document.getElementById(containerId);
+
+    if (!container || !taData) return;
+
+    container.innerHTML = '';
+
+    taData.forEach(ta => {
+      const taItem = document.createElement('div');
+      taItem.className = 'ta-item';
+
+      taItem.innerHTML = `
+      <div class="ta-info">
+        <div class="ta-avatar">${ta.avatar}</div>
+        <div class="ta-details">
+          <div class="ta-name">${ta.name}</div>
+          <div class="ta-type">${ta.type}</div>
+          <div class="ta-tasks-summary">
+            ${Object.entries(ta.tasks).map(([task, hours]) =>
+        hours > 0 ? `<span><span class="task-value">${hours}h</span> ${capitalize(task)}</span>` : ''
+      ).join('')}
+          </div>
+        </div>
+      </div>
+      <div class="hours-input">
+        <input type="number" value="${ta.hours}" min="1" max="20" data-ta-id="${ta.id}" readonly class="read-only"> hrs/week
+        <button class="distribute-tasks-btn" data-ta-id="${ta.id}" data-course="${encodeURIComponent(ta.course)}">Distribute Tasks</button>
+      </div>
+    `;
+      container.appendChild(taItem);
+    });
+
+    // Add event listeners for distribute tasks buttons
+    document.querySelectorAll(`#${containerId} .distribute-tasks-btn`).forEach(button => {
+      button.addEventListener('click', e => {
+        const id = parseInt(e.target.dataset.taId);
+        const course = decodeURIComponent(e.target.dataset.course);
+        const ta = allTAData[course].find(t => t.id === id);
+        if (ta) openTaskModal(ta);
+      });
+    });
+  }
+
+  // Open task distribution modal
+  function openTaskModal(ta) {
+    currentTA = ta;
+    const modal = document.getElementById('task-modal');
+    const body = document.getElementById('modal-body');
+    document.getElementById('modal-title').innerText = `Distribute Tasks for ${ta.name} (${ta.totalHours} hrs)`;
+
+    body.innerHTML = '';
+
+    // Create fields for each task type
+    for (let key in ta.tasks) {
+      body.innerHTML += `
+      <div class="task-field">
+        <label>${capitalize(key)}</label>
+        <input type="number" value="${ta.tasks[key]}" min="0" max="${ta.totalHours}" data-task="${key}" />
+      </div>
+    `;
+    }
+
+    // Add hours summary
+    body.innerHTML += `
+    <div class="hours-summary">
+      <span>Total Allocated:</span>
+      <span id="total-allocated-hours">0 / ${ta.totalHours} hrs</span>
+    </div>
+  `;
+
+    // Add event listeners to update total allocated hours
+    setTimeout(() => {
+      const inputs = document.querySelectorAll('#modal-body input');
+      inputs.forEach(input => {
+        input.addEventListener('input', updateTotalAllocatedHours);
+      });
+      updateTotalAllocatedHours();
+    }, 0);
+
+    modal.style.display = 'flex';
+  }
+
+  // Close task distribution modal
+  function closeTaskModal() {
+    document.getElementById('task-modal').style.display = 'none';
+    currentTA = null;
+  }
+
+  // Update total allocated hours in modal
+  function updateTotalAllocatedHours() {
+    if (!currentTA) return;
+
+    const inputs = document.querySelectorAll('#modal-body input');
+    let total = 0;
+
+    inputs.forEach(input => {
+      total += parseInt(input.value) || 0;
+    });
+
+    const totalElement = document.getElementById('total-allocated-hours');
+    totalElement.textContent = `${total} / ${currentTA.totalHours} hrs`;
+
+    // Highlight if over limit
+    if (total > currentTA.totalHours) {
+      totalElement.style.color = '#ff5252';
+    } else {
+      totalElement.style.color = total === currentTA.totalHours ? '#4caf50' : '';
+    }
+  }
+
+  // Save task distribution
+  function saveTaskDistribution() {
+    if (!currentTA) return;
+
+    const inputs = document.querySelectorAll('#modal-body input');
+    let total = 0;
+
+    inputs.forEach(input => {
+      const key = input.dataset.task;
+      const val = parseInt(input.value) || 0;
+      currentTA.tasks[key] = val;
+      total += val;
+    });
+
+    if (total > currentTA.totalHours) {
+      alert(`Total task hours (${total}) exceed assigned hours (${currentTA.totalHours})!`);
+      return;
+    }
+
+    // Re-render the TAs to show updated task distribution
+    const courseListMap = {
+      "Software Engineering Principles": "se-principles-ta-list",
+      "Database Systems": "db-systems-ta-list",
+      "Mobile Application Development": "mobile-app-ta-list"
+    };
+
+    renderTAs(currentTA.course, courseListMap[currentTA.course]);
+    closeTaskModal();
+  }
+
+  // Helper function to capitalize strings
+  function capitalize(str) {
+    return str.replace(/\w\S*/g, text => {
+      return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
+    });
+  }
+
+  // Initialize all TAs on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Make hours displays read-only
+    const hoursInputs = document.querySelectorAll('.hours-input input');
+    hoursInputs.forEach(input => {
+      input.readOnly = true;
+      input.classList.add('read-only');
+    });
+
+    // Render all courses
+    renderTAs("Software Engineering Principles", "se-principles-ta-list");
+    renderTAs("Database Systems", "db-systems-ta-list");
+    renderTAs("Mobile Application Development", "mobile-app-ta-list");
+
+    // Add event listeners to save buttons
+    const saveButtons = document.querySelectorAll('.assignment-actions .save-btn');
+    saveButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const container = this.closest('.assignment-container');
+        const courseName = container.querySelector('.course-header h3').textContent;
+        alert(`Changes for ${courseName} have been saved!`);
+      });
+    });
+
+    // Add event listeners to cancel buttons
+    const cancelButtons = document.querySelectorAll('.assignment-actions .cancel-btn');
+    cancelButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const container = this.closest('.assignment-container');
+        const courseName = container.querySelector('.course-header h3').textContent;
+        if (confirm(`Are you sure you want to cancel changes for ${courseName}?`)) {
+          // Reload or reset the data
+          const courseListMap = {
+            "Software Engineering Principles": "se-principles-ta-list",
+            "Database Systems": "db-systems-ta-list",
+            "Mobile Application Development": "mobile-app-ta-list"
+          };
+          renderTAs(courseName, courseListMap[courseName]);
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

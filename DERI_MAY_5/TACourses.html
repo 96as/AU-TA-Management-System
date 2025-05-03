@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TA Courses</title>
+
+  <!-- Material Design Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="task-tracker.js"></script>
+
+
+</head>
+<body>
+<div class="app-wrap">
+  <div class="app-inner">
+    <main class="main">
+      <nav id="drawer" class="drawer drawer-rail">
+        <div class="drawer drawer-rail" id="sidebar">
+          <div class="drawer-content">
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+              <img src="img/logo.8f8d722a.png" alt=":P fix meeeee" class="logo">
+              <span class="only-full university-name">Alfaisal University</span>
+            </div>
+
+            <div class="divider divider-bottom-margin"></div>
+
+            <a href="manager-dashboard.html" class="nav-item">
+              <div class="nav-prepend">
+                <i class="fas fa-home"></i>
+              </div>
+              <span class="only-full">Dashboard</span>
+            </a>
+
+            <a href="courses-management.html" class="nav-item">
+              <div class="nav-prepend">
+                <i class="fas fa-book"></i>
+              </div>
+              <span class="only-full">Courses</span>
+            </a>
+
+            <a href="ta-management.html" class="nav-item">
+              <div class="nav-prepend">
+                <i class="fas fa-users"></i>
+              </div>
+              <span class="only-full">TA Management</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+              <div class="nav-prepend">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <span class="only-full">Reports</span>
+            </a>
+
+            <div class="divider"></div>
+
+            <a href="pageeeee" class="nav-item">
+              <div class="nav-prepend">
+                <i class="mdi mdi-account-circle"></i>
+              </div>
+              <span class="only-full">Profile</span>
+            </a>
+            <a href="login.html" class="nav-item logout">
+              <div class="nav-prepend">
+                <i class="fas fa-sign-out-alt"></i>
+              </div>
+              <span class="only-full">Logout</span>
+            </a>
+          </div>
+
+          <button class="drawer-toggle-btn" id="sidebarToggle">
+            <i class="fas fa-chevron-right" id="toggleIcon"></i>
+          </button>
+        </div>
+      </nav>
+
+      <div id="main-content" class="main-content">
+        <div class="page-header">
+          <h2>My Teaching Assignments</h2>
+        </div>
+        <ul class="breadcrumbs">
+          <li><a href="/">TA Panel</a></li>
+          <li>My Courses</li>
+        </ul>
+        <hr class="divider divider-bottom-margin">
+
+        <!-- Summary card -->
+        <div class="card">
+          <div class="course-header">
+            <h3 class="text-lg" style="color: white">Assignment Overview</h3>
+            <p class="text-sub"style="color: white">College of Engineering - Teaching Assistant</p>
+          </div>
+
+          <div class="course-info">
+            <div>
+              <p><strong>Total Courses:</strong> 2</p>
+              <p><strong>Academic Term:</strong> Spring 2025</p>
+            </div>
+            <div>
+              <p><strong>Total Hours Assigned:</strong> 23 hours/week</p>
+              <p><strong>Hours Completed:</strong> 85 of 345 (Spring term)</p>
+            </div>
+          </div>
+
+          <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 25%"></div>
+          </div>
+          <p class="text-xs" style="text-align: right;">Term Progress: 25%</p>
+          <div class="progress-tracking-options">
+            <label>
+              <input type="radio" name="progress-mode" value="weekly" checked>
+              Weekly Progress
+            </label>
+            <label>
+              <input type="radio" name="progress-mode" value="semester">
+              Semester Progress
+            </label>
+          </div>
+
+          <div class="card-footer">
+            <div class="date-container">
+              <i class="mdi mdi-calendar-range calendar-icon"></i>
+              <p class="text-xs date-text">Term Dates: Jan 15, 2025 - May 30, 2025</p>
+            </div>
+            <button class="back-btn" onclick="history.back()">Back to Dashboard</button>
+          </div>
+        </div>
+
+        <!-- Course 1 -->
+        <div id="course-1" class="course-container">
+          <div class="course-title">
+            <h3>Software Engineering Principles <span class="status-tag status-active">Active</span></h3>
+            <p>SE 117 | Section 01 | Spring 2025</p>
+          </div>
+
+          <div class="course-content">
+            <div class="course-info">
+              <div>
+                <p><strong>Instructor:</strong> Dr. Mohammed Khan</p>
+                <p><strong>Schedule:</strong> Mon/Wed 10:00-11:30 AM</p>
+                <p><strong>Location:</strong> Bg 65</p>
+              </div>
+              <div>
+                <p><strong>Your Hours:</strong> 15 hours/week</p>
+                <p><strong>Role:</strong> Graduate Teaching Assistant</p>
+                <p><strong>Hours Completed:</strong> 60 of 225</p>
+              </div>
+            </div>
+
+            <div class="responsibilites-section-title">
+              <i class="mdi mdi-clipboard-list"></i>
+              <span>Your Responsibilities</span>
+              <button class="expand-btn" onclick="toggleTASection('course1-responsibilities')">
+                <i class="mdi mdi-chevron-down"></i>
+              </button>
+            </div>
+
+            <div id="course1-responsibilities">
+              <div class="responsibility-card">
+                <div class="responsibility-card-header">
+                  <div>
+                    <h4><i class="mdi mdi-laptop assignment-icon"></i>Lab Sections A & B</h4>
+                    <p class="text-sub">Assist students during lab sessions</p>
+                  </div>
+                  <div class="hours-badge">8 Hours/Week</div>
+                </div>
+
+                <div class="tags">
+                  <div class="tag">Section A: Monday 2:00-4:00 PM</div>
+                  <div class="tag">Section B: Wednesday 2:00-4:00 PM</div>
+                  <div class="tag">Lab Room: 4th floor</div>
+                </div>
+              </div>
+
+              <div class="responsibility-card">
+                <div class="responsibility-card-header">
+                  <div>
+                    <h4><i class="mdi mdi-clock-outline assignment-icon"></i>Office Hours</h4>
+                    <p class="text-sub">Provide additional help to students</p>
+                  </div>
+                  <div class="hours-badge">4 Hours/Week</div>
+                </div>
+
+                <div class="tags">
+                  <div class="tag">Monday 4:00-6:00 PM</div>
+                  <div class="tag">Wednesday 4:00-6:00 PM</div>
+                  <div class="tag">Location: Office</div>
+                </div>
+              </div>
+
+              <div class="responsibility-card">
+                <div class="responsibility-card-header">
+                  <div>
+                    <h4><i class="mdi mdi-file-document-outline assignment-icon"></i>Assignment Grading</h4>
+                    <p class="text-sub">Grade student assignments and provide feedback</p>
+                  </div>
+                  <div class="hours-badge">3 Hours/Week</div>
+                </div>
+
+                <div class="tags">
+                  <div class="tag">Weekly Assignments</div>
+                  <div class="tag">Submission Platform: Canvas</div>
+                </div>
+              </div>
+
+              <div class="instructor-contact">
+                <i class="mdi mdi-email contact-icon"></i>
+                <span>Dr. Mohammed Khan: mkhan@alfaisal.edu</span>
+              </div>
+            </div>
+
+            <div class="responsibilites-section-title">
+              <i class="mdi mdi-calendar-week"></i>
+              <span>Weekly Schedule</span>
+              <button class="expand-btn" onclick="toggleTASection('course1-schedule')">
+                <i class="mdi mdi-chevron-down"></i>
+              </button>
+            </div>
+
+            <div id="course1-schedule" class="weekly-schedule">
+              <div class="schedule-header">Your Weekly Schedule for SE 117</div>
+              <div class="schedule-row">
+                <div class="schedule-day">Monday</div>
+                <div class="schedule-hours">10:00-11:30 AM (Class), 2:00-4:00 PM (Lab A), 4:00-6:00 PM (Office Hours)</div>
+              </div>
+              <div class="schedule-row">
+                <div class="schedule-day">Wednesday</div>
+                <div class="schedule-hours">10:00-11:30 AM (Class), 2:00-4:00 PM (Lab B), 4:00-6:00 PM (Office Hours)</div>
+              </div>
+              <div class="schedule-row">
+                <div class="schedule-day">Friday</div>
+                <div class="schedule-hours">Flexible time for grading (3 hours)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div id="course-2" class="course-container">
+          <div class="course-title">
+            <h3>Database Systems <span class="status-tag status-active">Active</span></h3>
+            <p>SE 210 | Section 02 | Spring 2025</p>
+          </div>
+
+          <div class="course-content">
+            <div class="course-info">
+              <div>
+                <p><strong>Instructor:</strong> Dr. Sarah Johnson</p>
+                <p><strong>Schedule:</strong> Tue/Thu 13:00-14:30 PM</p>
+                <p><strong>Location:</strong> LAB</p>
+              </div>
+              <div>
+                <p><strong>Your Hours:</strong> 8 hours/week</p>
+                <p><strong>Role:</strong> Graduate Teaching Assistant</p>
+                <p><strong>Hours Completed:</strong> 25 of 120</p>
+              </div>
+            </div>
+
+            <div class="responsibilites-section-title">
+              <i class="mdi mdi-clipboard-list"></i>
+              <span>Your Responsibilities</span>
+              <button class="expand-btn" onclick="toggleTASection('course2-responsibilities')">
+                <i class="mdi mdi-chevron-down"></i>
+              </button>
+            </div>
+
+            <div id="course2-responsibilities">
+              <div class="responsibility-card">
+                <div class="responsibility-card-header">
+                  <div>
+                    <h4><i class="mdi mdi-laptop assignment-icon"></i>Lab Section C</h4>
+                    <p class="text-sub">Assist students during lab sessions</p>
+                  </div>
+                  <div class="hours-badge">3 Hours/Week</div>
+                </div>
+
+                <div class="tags">
+                  <div class="tag">Thursday 3:00-6:00 PM</div>
+                  <div class="tag">Lab Room: Lab 2</div>
+                </div>
+              </div>
+
+              <div class="responsibility-card">
+                <div class="responsibility-card-header">
+                  <div>
+                    <h4><i class="mdi mdi-file-document-outline assignment-icon"></i>Assignment Grading</h4>
+                    <p class="text-sub">Grade student database projects and assignments</p>
+                  </div>
+                  <div class="hours-badge">3 Hours/Week</div>
+                </div>
+
+                <div class="tags">
+                  <div class="tag">Weekly SQL Assignments</div>
+                  <div class="tag">Bi-weekly Database Projects</div>
+                </div>
+              </div>
+
+              <div class="responsibility-card">
+                <div class="responsibility-card-header">
+                  <div>
+                    <h4><i class="mdi mdi-clock-outline assignment-icon"></i>Office Hours</h4>
+                    <p class="text-sub">Provide help with database concepts and SQL</p>
+                  </div>
+                  <div class="hours-badge">2 Hours/Week</div>
+                </div>
+
+                <div class="tags">
+                  <div class="tag">Tuesday 3:00-5:00 PM</div>
+                  <div class="tag">Location: TA Office</div>
+                </div>
+              </div>
+
+              <div class="instructor-contact">
+                <i class="mdi mdi-email contact-icon"></i>
+                <span>Dr. Sarah Johnson: sjohnson@alfaisal.edu</span>
+              </div>
+            </div>
+
+            <div class="responsibilites-section-title">
+              <i class="mdi mdi-calendar-week"></i>
+              <span>Weekly Schedule</span>
+              <button class="expand-btn" onclick="toggleTASection('course2-schedule')">
+                <i class="mdi mdi-chevron-down"></i>
+              </button>
+            </div>
+
+            <div id="course2-schedule" class="weekly-schedule">
+              <div class="schedule-header">Your Weekly Schedule for SE 210</div>
+              <div class="schedule-row">
+                <div class="schedule-day">Tuesday</div>
+                <div class="schedule-hours">13:00-14:30 PM (Class), 3:00-5:00 PM (Office Hours)</div>
+              </div>
+              <div class="schedule-row">
+                <div class="schedule-day">Thursday</div>
+                <div class="schedule-hours">13:00-14:30 PM (Class), 3:00-6:00 PM (Lab C)</div>
+              </div>
+              <div class="schedule-row">
+                <div class="schedule-day">Sunday</div>
+                <div class="schedule-hours">Flexible time for grading (3 hours)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+  // Main initialization when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize task tracking system
+    initTaskTracking();
+
+    // Set up drawer toggle button event listener
+    const drawerToggleBtn = document.querySelector('.drawer-toggle-btn');
+    if (drawerToggleBtn) {
+      drawerToggleBtn.addEventListener('click', toggleDrawer);
+    }
+  });
+
+  // Toggle drawer expansion/collapse
+  function toggleDrawer() {
+    const drawer = document.getElementById('drawer');
+    drawer.classList.toggle('drawer-rail');
+
+    const toggleIcon = document.querySelector('.drawer-toggle-btn i');
+    if (toggleIcon) {
+      if (drawer.classList.contains('drawer-rail')) {
+        toggleIcon.classList.remove('mdi-chevron-left');
+        toggleIcon.classList.add('mdi-chevron-right');
+      } else {
+        toggleIcon.classList.remove('mdi-chevron-right');
+        toggleIcon.classList.add('mdi-chevron-left');
+      }
+    }
+  }
+
+  // Toggle visibility of TA section content
+  function toggleTASection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.classList.toggle('hidden');
+
+    const button = event.currentTarget;
+    const icon = button.querySelector('i');
+
+    if (section.classList.contains('hidden')) {
+      icon.classList.remove('mdi-chevron-up');
+      icon.classList.add('mdi-chevron-down');
+    } else {
+      icon.classList.remove('mdi-chevron-down');
+      icon.classList.add('mdi-chevron-up');
+    }
+  }
+
+  // Initialize task tracking system
+  function initTaskTracking() {
+    // Add checkboxes to all responsibility cards
+    addCheckboxesToTasks();
+
+    // Add styles for checkboxes
+    addCheckboxStyles();
+
+    // Load saved task states from localStorage
+    loadTaskStates();
+
+    // Calculate initial progress
+    updateProgressBars();
+
+    // Set up event listeners for progress tracking mode
+    const progressModeRadios = document.querySelectorAll('input[name="progress-mode"]');
+    if (progressModeRadios.length) {
+      progressModeRadios.forEach(radio => {
+        radio.addEventListener('change', updateProgressBars);
+      });
+    }
+  }
+
+  // Add checkboxes to responsibility cards
+  function addCheckboxesToTasks() {
+    const responsibilityCards = document.querySelectorAll('.responsibility-card');
+
+    responsibilityCards.forEach((card, index) => {
+      const header = card.querySelector('.responsibility-card-header');
+
+      // Create checkbox container
+      const checkboxContainer = document.createElement('div');
+      checkboxContainer.className = 'task-checkbox-container';
+
+      // Get task name from header
+      const taskName = card.querySelector('h4').textContent.trim();
+
+      // Create checkbox input
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = `task-${index}`;
+      checkbox.className = 'task-checkbox';
+      checkbox.dataset.taskName = taskName;
+
+      // Determine which course this task belongs to
+      const courseContainer = card.closest('.course-container');
+      checkbox.dataset.courseId = courseContainer ? courseContainer.id : `course-${Math.floor(index/3)}`;
+
+      // Extract hours from the hours badge
+      const hoursBadge = card.querySelector('.hours-badge');
+      if (hoursBadge) {
+        const hoursMatch = hoursBadge.textContent.match(/(\d+)\s*Hours/i);
+        checkbox.dataset.hours = hoursMatch && hoursMatch[1] ? hoursMatch[1] : '1';
+      } else {
+        checkbox.dataset.hours = '1'; // Default value
+      }
+
+      // Create label for checkbox
+      const label = document.createElement('label');
+      label.htmlFor = checkbox.id;
+      label.className = 'task-checkbox-label';
+      label.textContent = 'Complete';
+
+      // Add event listener to checkbox
+      checkbox.addEventListener('change', handleTaskCheckboxChange);
+
+      // Add checkbox and label to container
+      checkboxContainer.appendChild(checkbox);
+      checkboxContainer.appendChild(label);
+
+      // Add container to card header
+      header.appendChild(checkboxContainer);
+    });
+  }
+
+  // Handle checkbox change events
+  function handleTaskCheckboxChange(event) {
+    const checkbox = event.target;
+    const isChecked = checkbox.checked;
+    const taskName = checkbox.dataset.taskName;
+    const courseId = checkbox.dataset.courseId;
+
+    // Save task state to localStorage
+    saveTaskState(courseId, taskName, isChecked);
+
+    // Update progress bars
+    updateProgressBars();
+  }
+
+  // Save task state to localStorage
+  function saveTaskState(courseId, taskName, isCompleted) {
+    // Create a unique key for this task
+    const taskKey = `${courseId}-${taskName.replace(/\s+/g, '_')}`;
+
+    // Save to localStorage
+    localStorage.setItem(taskKey, isCompleted ? 'completed' : 'incomplete');
+
+    // Save completion timestamp if completed
+    if (isCompleted) {
+      localStorage.setItem(`${taskKey}-timestamp`, new Date().toISOString());
+    } else {
+      localStorage.removeItem(`${taskKey}-timestamp`);
+    }
+  }
+
+  // Load saved task states from localStorage
+  function loadTaskStates() {
+    const checkboxes = document.querySelectorAll('.task-checkbox');
+
+    checkboxes.forEach(checkbox => {
+      const courseId = checkbox.dataset.courseId;
+      const taskName = checkbox.dataset.taskName;
+      const taskKey = `${courseId}-${taskName.replace(/\s+/g, '_')}`;
+
+      // Check if task was saved as completed
+      const savedState = localStorage.getItem(taskKey);
+      if (savedState === 'completed') {
+        checkbox.checked = true;
+      }
+    });
+  }
+
+  // Update all progress bars based on task completion
+  function updateProgressBars() {
+    // Update overall term progress
+    updateOverallProgress();
+
+    // Update per-course progress
+    updateCourseProgress();
+  }
+
+  // Update the overall term progress bar
+  function updateOverallProgress() {
+    const progressBar = document.querySelector('.progress-bar');
+    const progressText = document.querySelector('.text-xs[style="text-align: right;"]');
+
+    if (!progressBar || !progressText) return;
+
+    // Check if using weekly or semester view
+    const isWeeklyView = document.querySelector('input[name="progress-mode"][value="weekly"]').checked;
+
+    // Calculate completed hours and total hours
+    const checkboxes = document.querySelectorAll('.task-checkbox');
+    let totalHours = 0;
+    let completedHours = 0;
+
+    checkboxes.forEach(checkbox => {
+      const hours = parseInt(checkbox.dataset.hours || '0', 10);
+      totalHours += hours;
+
+      if (checkbox.checked) {
+        completedHours += hours;
+      }
+    });
+
+    // For weekly view, we show completion of weekly tasks
+    // For semester view, we multiply by weeks in semester
+    const weeksInSemester = 15;
+    let percentComplete;
+    let hoursDisplayText;
+
+    if (isWeeklyView) {
+      percentComplete = Math.min(100, Math.round((completedHours / totalHours) * 100));
+      hoursDisplayText = `${completedHours} of ${totalHours} (weekly)`;
+    } else {
+      // Semester view
+      const totalSemesterHours = totalHours * weeksInSemester;
+      const expectedSemesterProgress = Math.round(totalSemesterHours * 0.25); // 25% of semester
+      percentComplete = 25; // Fixed at term progress
+      completedHours = 85; // From original data - total hours completed so far
+      hoursDisplayText = `${completedHours} of ${totalSemesterHours} (Spring term)`;
+    }
+
+    // Update progress bar
+    progressBar.style.width = `${percentComplete}%`;
+
+    // Update progress text
+    progressText.textContent = `Term Progress: ${percentComplete}%`;
+
+    // Update hours completed text
+    const hoursCompletedText = document.querySelector('.card .course-info p:contains("Hours Completed:")');
+    if (hoursCompletedText) {
+      hoursCompletedText.textContent = `Hours Completed: ${hoursDisplayText}`;
+    }
+  }
+
+  // Update progress for each course
+  function updateCourseProgress() {
+    const courseContainers = document.querySelectorAll('.course-container');
+
+    courseContainers.forEach(course => {
+      const courseId = course.id;
+      const hoursCompletedText = course.querySelector('.course-info p:contains("Hours Completed:")');
+
+      if (!hoursCompletedText) return;
+
+      // Get all checkboxes for this course
+      const courseCheckboxes = document.querySelectorAll(`.task-checkbox[data-course-id="${courseId}"]`);
+
+      let totalCourseHours = 0;
+      let completedCourseHours = 0;
+
+      courseCheckboxes.forEach(checkbox => {
+        const hours = parseInt(checkbox.dataset.hours || '0', 10);
+        totalCourseHours += hours;
+
+        if (checkbox.checked) {
+          completedCourseHours += hours;
+        }
+      });
+
+      // Get weekly hours for this course
+      const totalHoursElement = course.querySelector('.course-info p:contains("Your Hours:")');
+      let weeklyHours = totalCourseHours;
+
+      if (totalHoursElement) {
+        const hoursMatch = totalHoursElement.textContent.match(/(\d+)\s*hours/i);
+        if (hoursMatch && hoursMatch[1]) {
+          weeklyHours = parseInt(hoursMatch[1], 10);
+        }
+      }
+
+      // Get the default hours for each course
+      let defaultCompletedHours, defaultTotalHours;
+
+      if (courseId === 'course-1') {
+        defaultCompletedHours = 60;
+        defaultTotalHours = 225;
+      } else if (courseId === 'course-2') {
+        defaultCompletedHours = 25;
+        defaultTotalHours = 120;
+      } else {
+        defaultCompletedHours = completedCourseHours;
+        defaultTotalHours = weeklyHours * 15;
+      }
+
+      // Check if using weekly or semester view
+      const isWeeklyView = document.querySelector('input[name="progress-mode"][value="weekly"]').checked;
+
+      if (isWeeklyView) {
+        // Weekly view: Show weekly task completion
+        hoursCompletedText.textContent = `Hours Completed: ${completedCourseHours} of ${totalCourseHours} (weekly)`;
+      } else {
+        // Semester view: Show fixed values from original UI
+        hoursCompletedText.textContent = `Hours Completed: ${defaultCompletedHours} of ${defaultTotalHours}`;
+      }
+    });
+  }
+
+  // Helper function for text content checking (jQuery-like)
+  Element.prototype.contains = function(text) {
+    return this.textContent.includes(text);
+  };
+
+  // Add CSS for the checkbox styling
+  function addCheckboxStyles() {
+    const styleElement = document.createElement('style');
+    styleElement.textContent = `
+    .task-checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      padding-left: 10px;
+    }
+
+    .task-checkbox {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      margin-right: 5px;
+      accent-color: #28a745;
+    }
+
+    .task-checkbox-label {
+      font-size: 12px;
+      color: #6c757d;
+      cursor: pointer;
+    }
+
+    .responsibility-card-header {
+      justify-content: space-between;
+    }
+
+    .hidden {
+      display: none;
+    }
+  `;
+    document.head.appendChild(styleElement);
+  }
+
+</script>
+
+</body>
+</html>
