@@ -434,45 +434,49 @@
         <!-- Summary Panel -->
         <div class="summary-panel">
           <div class="summary-item">
-            <div class="summary-value">3</div>
+            <div class="summary-value">0</div>
             <div class="summary-label">Assigned Courses</div>
           </div>
           <div class="summary-item">
-            <div class="summary-value">45</div>
+            <div class="summary-value">0</div>
             <div class="summary-label">Total Hours</div>
           </div>
           <div class="summary-item">
-            <div class="summary-value">12</div>
+            <div class="summary-value">0</div>
             <div class="summary-label">Marking Hours</div>
           </div>
           <div class="summary-item">
-            <div class="summary-value">18</div>
+            <div class="summary-value">0</div>
             <div class="summary-label">Lab Supervision</div>
           </div>
           <div class="summary-item">
-            <div class="summary-value">15</div>
+            <div class="summary-value">0</div>
             <div class="summary-label">Proctoring</div>
           </div>
         </div>
 
         <h2>My Courses</h2>
-        <div class="cards">
+
+        <div class="text-sub" id="noCoursesMessage" style="text-align: center; margin-top: 110px;">
+          No courses assigned yet.
+        </div>
+
+        <div class="cards" style="display: none;">
           <!-- Course Card 1 -->
-          <div class="card">
+          <div class="card" >
             <div class="card-title">
               <div class="d-col">
-                <div class="text-lg">Operating Systems</div>
-                <div class="text-sub">SE 314 · Spring 2025</div>
+                <div class="text-lg">Course Title</div>
+                <div class="text-sub"><span>Course Code</span> . <span>Semester</span></div>
               </div>
               <span class="semester-badge">Current</span>
             </div>
             <div class="tags">
-              <div class="tag">120 Students</div>
-              <div class="tag">Sofie Dawood</div>
+              <div class="tag"><span>0</span> Students</div>
+              <div class="tag">Instructor</div>
               <div class="tag-purple">
                 <i class="fas fa-clock icon-purple"></i>
-                15 Hours
-              </div>
+                <span>0</span>&nbsp;Hours</div>
             </div>
 
             <div class="task-list">
@@ -481,28 +485,28 @@
                   <i class="fas fa-clipboard-check task-icon"></i>
                   Marking
                 </div>
-                <div class="task-hours">5 hours</div>
+                <div class="task-hours"><span>0</span> hours</div>
               </div>
               <div class="task-item">
                 <div class="task-name">
                   <i class="fas fa-eye task-icon"></i>
                   Proctoring
                 </div>
-                <div class="task-hours">3 hours</div>
+                <div class="task-hours"><span>0</span> hours</div>
               </div>
               <div class="task-item">
                 <div class="task-name">
                   <i class="fas fa-chalkboard-teacher task-icon"></i>
                   Lab Supervision
                 </div>
-                <div class="task-hours">7 hours</div>
+                <div class="task-hours"><span>0</span> hours</div>
               </div>
             </div>
 
             <div class="progress-container">
               <div class="progress-info">
                 <span>Progress</span>
-                <span>60%</span>
+                <span>0%</span>
               </div>
               <div class="progress-bar-container">
                 <div class="progress-bar" style="width: 60%;"></div>
@@ -512,133 +516,132 @@
             <div class="card-footer">
               <div class="date-container">
                 <i class="far fa-calendar-alt calendar-icon"></i>
-                <span class="date-text">Jan 15 - May 25</span>
+                <span class="date-text">Time Period</span>
               </div>
               <div class="btn-details">View Details</div>
             </div>
           </div>
 
-          <!-- Course Card 2 -->
-          <div class="card">
-            <div class="card-title">
-              <div class="d-col">
-                <div class="text-lg">Data Structures</div>
-                <div class="text-sub">SE 212 · Spring 2025</div>
-              </div>
-              <span class="semester-badge">Current</span>
+         <!-- Course Card 2 -->
+         <div class="card">
+          <div class="card-title">
+            <div class="d-col">
+              <div class="text-lg">Course Title</div>
+              <div class="text-sub"><span>Course Code</span> . <span>Semester</span></div>
             </div>
-            <div class="tags">
-              <div class="tag">85 Students</div>
-              <div class="tag">Ahmed Hassan</div>
-              <div class="tag-purple">
-                <i class="fas fa-clock icon-purple"></i>
-                20 Hours
-              </div>
-            </div>
+            <span class="semester-badge">Current</span>
+          </div>
+          <div class="tags">
+            <div class="tag"><span>0</span> Students</div>
+            <div class="tag">Instructor</div>
+            <div class="tag-purple">
+              <i class="fas fa-clock icon-purple"></i>
+              <span>0</span>&nbsp;Hours</div>
+          </div>
 
-            <div class="task-list">
-              <div class="task-item">
-                <div class="task-name">
-                  <i class="fas fa-clipboard-check task-icon"></i>
-                  Marking
-                </div>
-                <div class="task-hours">8 hours</div>
+          <div class="task-list">
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-clipboard-check task-icon"></i>
+                Marking
               </div>
-              <div class="task-item">
-                <div class="task-name">
-                  <i class="fas fa-eye task-icon"></i>
-                  Proctoring
-                </div>
-                <div class="task-hours">4 hours</div>
-              </div>
-              <div class="task-item">
-                <div class="task-name">
-                  <i class="fas fa-chalkboard-teacher task-icon"></i>
-                  Lab Supervision
-                </div>
-                <div class="task-hours">8 hours</div>
-              </div>
+              <div class="task-hours"><span>0</span> hours</div>
             </div>
-
-            <div class="progress-container">
-              <div class="progress-info">
-                <span>Progress</span>
-                <span>45%</span>
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-eye task-icon"></i>
+                Proctoring
               </div>
-              <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 45%;"></div>
-              </div>
+              <div class="task-hours"><span>0</span> hours</div>
             </div>
-
-            <div class="card-footer">
-              <div class="date-container">
-                <i class="far fa-calendar-alt calendar-icon"></i>
-                <span class="date-text">Jan 15 - May 25</span>
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-chalkboard-teacher task-icon"></i>
+                Lab Supervision
               </div>
-              <div class="btn-details">View Details</div>
+              <div class="task-hours"><span>0</span> hours</div>
             </div>
           </div>
 
-          <!-- Course Card 3 -->
-          <div class="card">
-            <div class="card-title">
-              <div class="d-col">
-                <div class="text-lg">Database Systems</div>
-                <div class="text-sub">SE 312 · Spring 2025</div>
-              </div>
-              <span class="semester-badge">Current</span>
+          <div class="progress-container">
+            <div class="progress-info">
+              <span>Progress</span>
+              <span>0%</span>
             </div>
-            <div class="tags">
-              <div class="tag">70 Students</div>
-              <div class="tag">Fatima Ali</div>
-              <div class="tag-purple">
-                <i class="fas fa-clock icon-purple"></i>
-                10 Hours
-              </div>
-            </div>
-
-            <div class="task-list">
-              <div class="task-item">
-                <div class="task-name">
-                  <i class="fas fa-clipboard-check task-icon"></i>
-                  Marking
-                </div>
-                <div class="task-hours">4 hours</div>
-              </div>
-              <div class="task-item">
-                <div class="task-name">
-                  <i class="fas fa-eye task-icon"></i>
-                  Proctoring
-                </div>
-                <div class="task-hours">3 hours</div>
-              </div>
-              <div class="task-item">
-                <div class="task-name">
-                  <i class="fas fa-chalkboard-teacher task-icon"></i>
-                  Lab Supervision
-                </div>
-                <div class="task-hours">3 hours</div>
-              </div>
-            </div>
-
-            <div class="progress-container">
-              <div class="progress-info">
-                <span>Progress</span>
-                <span>30%</span>
-              </div>
-              <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 30%;"></div>
-              </div>
-            </div>
-
-            <div class="card-footer">
-              <div class="date-container">
-                <i class="far fa-calendar-alt calendar-icon"></i>
-                <span class="date-text">Jan 15 - May 25</span>
-              </div>
-              <div class="btn-details">View Details</div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 60%;"></div>
             </div>
           </div>
+
+          <div class="card-footer">
+            <div class="date-container">
+              <i class="far fa-calendar-alt calendar-icon"></i>
+              <span class="date-text">Time Period</span>
+            </div>
+            <div class="btn-details">View Details</div>
+          </div>
+        </div>
+
+         <!-- Course Card 3 -->
+         <div class="card">
+          <div class="card-title">
+            <div class="d-col">
+              <div class="text-lg">Course Title</div>
+              <div class="text-sub"><span>Course Code</span> . <span>Semester</span></div>
+            </div>
+            <span class="semester-badge">Current</span>
+          </div>
+          <div class="tags">
+            <div class="tag"><span>0</span> Students</div>
+            <div class="tag">Instructor</div>
+            <div class="tag-purple">
+              <i class="fas fa-clock icon-purple"></i>
+              <span>0</span>&nbsp;Hours</div>
+          </div>
+
+          <div class="task-list">
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-clipboard-check task-icon"></i>
+                Marking
+              </div>
+              <div class="task-hours"><span>0</span> hours</div>
+            </div>
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-eye task-icon"></i>
+                Proctoring
+              </div>
+              <div class="task-hours"><span>0</span> hours</div>
+            </div>
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-chalkboard-teacher task-icon"></i>
+                Lab Supervision
+              </div>
+              <div class="task-hours"><span>0</span> hours</div>
+            </div>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-info">
+              <span>Progress</span>
+              <span>0%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 60%;"></div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="date-container">
+              <i class="far fa-calendar-alt calendar-icon"></i>
+              <span class="date-text">Time Period</span>
+            </div>
+            <div class="btn-details">View Details</div>
+          </div>
+        </div>
+
         </div>
       </div>
     </div>
