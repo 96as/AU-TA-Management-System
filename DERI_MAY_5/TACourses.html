@@ -96,19 +96,20 @@
 
           <div class="course-info">
             <div>
-              <p><strong>Total Courses:</strong> 2</p>
-              <p><strong>Academic Term:</strong> Spring 2025</p>
+              <p><strong>Total Courses:</strong> <span>0</span></p>
+              <p><strong>Academic Semester:</strong> <span>Not decided</span></p>
+        
             </div>
             <div>
-              <p><strong>Total Hours Assigned:</strong> 23 hours/week</p>
-              <p><strong>Hours Completed:</strong> 85 of 345 (Spring term)</p>
+              <p><strong>Total Hours Assigned:</strong> <span>0</span> hours/week</p>
+              <p><strong>Hours Completed:</strong> <span>0</span> </p>
             </div>
           </div>
 
           <div class="progress-bar-container">
             <div class="progress-bar" style="width: 25%"></div>
           </div>
-          <p class="text-xs" style="text-align: right;">Term Progress: 25%</p>
+          <p class="text-xs" style="text-align: right;">Semester Progress: <span>0</span>%</p>
           <div class="progress-tracking-options">
             <label>
               <input type="radio" name="progress-mode" value="weekly" checked>
@@ -123,30 +124,36 @@
           <div class="card-footer">
             <div class="date-container">
               <i class="mdi mdi-calendar-range calendar-icon"></i>
-              <p class="text-xs date-text">Term Dates: Jan 15, 2025 - May 30, 2025</p>
+              <p class="text-xs date-text">Semester Dates: <span>Not decided</span></p>
             </div>
             <button class="back-btn" onclick="history.back()">Back to Dashboard</button>
           </div>
         </div>
 
+ 
+        <div class="text-sub" id="noCoursesMessage" style="text-align: center; margin-top: 110px;">
+          No courses assigned yet.
+        </div> 
+
+        <div style="display: none;">
         <!-- Course 1 -->
         <div id="course-1" class="course-container">
           <div class="course-title">
-            <h3>Software Engineering Principles <span class="status-tag status-active">Active</span></h3>
-            <p>SE 117 | Section 01 | Spring 2025</p>
+            <h3>Course Title <span class="status-tag status-active">Status (Active / Expired)</span></h3>
+            <p><span>Course code</span> <span> | Section | </span> <span> Semester </span></p>
           </div>
 
           <div class="course-content">
             <div class="course-info">
               <div>
-                <p><strong>Instructor:</strong> Dr. Mohammed Khan</p>
-                <p><strong>Schedule:</strong> Mon/Wed 10:00-11:30 AM</p>
-                <p><strong>Location:</strong> Bg 65</p>
+                <p><strong>Instructor:</strong> Not decided</p>
+                <p><strong>Schedule:</strong> Not decided</p>
+                <p><strong>Location:</strong> Not decided</p>
               </div>
               <div>
-                <p><strong>Your Hours:</strong> 15 hours/week</p>
-                <p><strong>Role:</strong> Graduate Teaching Assistant</p>
-                <p><strong>Hours Completed:</strong> 60 of 225</p>
+                <p><strong>Your Hours:</strong> 0 hours/week</p>
+                <p><strong>Role:</strong> Not decided</p>
+                <p><strong>Hours Completed:</strong> 0</p>
               </div>
             </div>
 
@@ -162,16 +169,15 @@
               <div class="responsibility-card">
                 <div class="responsibility-card-header">
                   <div>
-                    <h4><i class="mdi mdi-laptop assignment-icon"></i>Lab Sections A & B</h4>
+                    <h4><i class="mdi mdi-laptop assignment-icon"></i>Lab Assistant</h4>
                     <p class="text-sub">Assist students during lab sessions</p>
                   </div>
-                  <div class="hours-badge">8 Hours/Week</div>
+                  <div class="hours-badge">0 Hours/Week</div>
                 </div>
 
                 <div class="tags">
-                  <div class="tag">Section A: Monday 2:00-4:00 PM</div>
-                  <div class="tag">Section B: Wednesday 2:00-4:00 PM</div>
-                  <div class="tag">Lab Room: 4th floor</div>
+                  <div class="tag">Section <span>?</span>: <span>Timing</span></div>
+                  <div class="tag">Lab Room: Not decided</div>
                 </div>
               </div>
 
@@ -181,13 +187,12 @@
                     <h4><i class="mdi mdi-clock-outline assignment-icon"></i>Office Hours</h4>
                     <p class="text-sub">Provide additional help to students</p>
                   </div>
-                  <div class="hours-badge">4 Hours/Week</div>
+                  <div class="hours-badge">0 Hours/Week</div>
                 </div>
 
                 <div class="tags">
-                  <div class="tag">Monday 4:00-6:00 PM</div>
-                  <div class="tag">Wednesday 4:00-6:00 PM</div>
-                  <div class="tag">Location: Office</div>
+                  <div class="tag">Timing</div>
+                  <div class="tag">Location: <span>Not decided</span></div>
                 </div>
               </div>
 
@@ -197,18 +202,18 @@
                     <h4><i class="mdi mdi-file-document-outline assignment-icon"></i>Assignment Grading</h4>
                     <p class="text-sub">Grade student assignments and provide feedback</p>
                   </div>
-                  <div class="hours-badge">3 Hours/Week</div>
+                  <div class="hours-badge">0 Hours/Week</div>
                 </div>
 
                 <div class="tags">
                   <div class="tag">Weekly Assignments</div>
-                  <div class="tag">Submission Platform: Canvas</div>
+                  <div class="tag">Submission Platform: Not decided</div>
                 </div>
               </div>
 
               <div class="instructor-contact">
                 <i class="mdi mdi-email contact-icon"></i>
-                <span>Dr. Mohammed Khan: mkhan@alfaisal.edu</span>
+                <span>Instructor name: Email</span>
               </div>
             </div>
 
@@ -221,80 +226,57 @@
             </div>
 
             <div id="course1-schedule" class="weekly-schedule">
-              <div class="schedule-header">Your Weekly Schedule for SE 117</div>
+              <div class="schedule-header">Your Weekly Schedule for <span>Course code</span></div>
               <div class="schedule-row">
-                <div class="schedule-day">Monday</div>
-                <div class="schedule-hours">10:00-11:30 AM (Class), 2:00-4:00 PM (Lab A), 4:00-6:00 PM (Office Hours)</div>
-              </div>
-              <div class="schedule-row">
-                <div class="schedule-day">Wednesday</div>
-                <div class="schedule-hours">10:00-11:30 AM (Class), 2:00-4:00 PM (Lab B), 4:00-6:00 PM (Office Hours)</div>
-              </div>
-              <div class="schedule-row">
-                <div class="schedule-day">Friday</div>
-                <div class="schedule-hours">Flexible time for grading (3 hours)</div>
+                <div class="schedule-day">Day</div>
+                <div class="schedule-hours"><span>Responsibility Type</span> <span>Timing</span></div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Course 2 -->
+        <!-- Course 1 -->
         <div id="course-2" class="course-container">
           <div class="course-title">
-            <h3>Database Systems <span class="status-tag status-active">Active</span></h3>
-            <p>SE 210 | Section 02 | Spring 2025</p>
+            <h3>Course Title <span class="status-tag status-active">Status (Active / Expired)</span></h3>
+            <p><span>Course code</span> <span> | Section | </span> <span> Semester </span></p>
           </div>
 
           <div class="course-content">
             <div class="course-info">
               <div>
-                <p><strong>Instructor:</strong> Dr. Sarah Johnson</p>
-                <p><strong>Schedule:</strong> Tue/Thu 13:00-14:30 PM</p>
-                <p><strong>Location:</strong> LAB</p>
+                <p><strong>Instructor:</strong> Not decided</p>
+                <p><strong>Schedule:</strong> Not decided</p>
+                <p><strong>Location:</strong> Not decided</p>
               </div>
               <div>
-                <p><strong>Your Hours:</strong> 8 hours/week</p>
-                <p><strong>Role:</strong> Graduate Teaching Assistant</p>
-                <p><strong>Hours Completed:</strong> 25 of 120</p>
+                <p><strong>Your Hours:</strong> 0 hours/week</p>
+                <p><strong>Role:</strong> Not decided</p>
+                <p><strong>Hours Completed:</strong> 0</p>
               </div>
             </div>
 
             <div class="responsibilites-section-title">
               <i class="mdi mdi-clipboard-list"></i>
               <span>Your Responsibilities</span>
-              <button class="expand-btn" onclick="toggleTASection('course2-responsibilities')">
+              <button class="expand-btn" onclick="toggleTASection('course1-responsibilities')">
                 <i class="mdi mdi-chevron-down"></i>
               </button>
             </div>
 
-            <div id="course2-responsibilities">
+            <div id="course1-responsibilities">
               <div class="responsibility-card">
                 <div class="responsibility-card-header">
                   <div>
-                    <h4><i class="mdi mdi-laptop assignment-icon"></i>Lab Section C</h4>
+                    <h4><i class="mdi mdi-laptop assignment-icon"></i>Lab Assistant</h4>
                     <p class="text-sub">Assist students during lab sessions</p>
                   </div>
-                  <div class="hours-badge">3 Hours/Week</div>
+                  <div class="hours-badge">0 Hours/Week</div>
                 </div>
 
                 <div class="tags">
-                  <div class="tag">Thursday 3:00-6:00 PM</div>
-                  <div class="tag">Lab Room: Lab 2</div>
-                </div>
-              </div>
-
-              <div class="responsibility-card">
-                <div class="responsibility-card-header">
-                  <div>
-                    <h4><i class="mdi mdi-file-document-outline assignment-icon"></i>Assignment Grading</h4>
-                    <p class="text-sub">Grade student database projects and assignments</p>
-                  </div>
-                  <div class="hours-badge">3 Hours/Week</div>
-                </div>
-
-                <div class="tags">
-                  <div class="tag">Weekly SQL Assignments</div>
-                  <div class="tag">Bi-weekly Database Projects</div>
+                  <div class="tag">Section <span>?</span>: <span>Timing</span></div>
+                  <div class="tag">Lab Room: Not decided</div>
                 </div>
               </div>
 
@@ -302,47 +284,55 @@
                 <div class="responsibility-card-header">
                   <div>
                     <h4><i class="mdi mdi-clock-outline assignment-icon"></i>Office Hours</h4>
-                    <p class="text-sub">Provide help with database concepts and SQL</p>
+                    <p class="text-sub">Provide additional help to students</p>
                   </div>
-                  <div class="hours-badge">2 Hours/Week</div>
+                  <div class="hours-badge">0 Hours/Week</div>
                 </div>
 
                 <div class="tags">
-                  <div class="tag">Tuesday 3:00-5:00 PM</div>
-                  <div class="tag">Location: TA Office</div>
+                  <div class="tag">Timing</div>
+                  <div class="tag">Location: <span>Not decided</span></div>
+                </div>
+              </div>
+
+              <div class="responsibility-card">
+                <div class="responsibility-card-header">
+                  <div>
+                    <h4><i class="mdi mdi-file-document-outline assignment-icon"></i>Assignment Grading</h4>
+                    <p class="text-sub">Grade student assignments and provide feedback</p>
+                  </div>
+                  <div class="hours-badge">0 Hours/Week</div>
+                </div>
+
+                <div class="tags">
+                  <div class="tag">Weekly Assignments</div>
+                  <div class="tag">Submission Platform: Not decided</div>
                 </div>
               </div>
 
               <div class="instructor-contact">
                 <i class="mdi mdi-email contact-icon"></i>
-                <span>Dr. Sarah Johnson: sjohnson@alfaisal.edu</span>
+                <span>Instructor name: Email</span>
               </div>
             </div>
 
             <div class="responsibilites-section-title">
               <i class="mdi mdi-calendar-week"></i>
               <span>Weekly Schedule</span>
-              <button class="expand-btn" onclick="toggleTASection('course2-schedule')">
+              <button class="expand-btn" onclick="toggleTASection('course1-schedule')">
                 <i class="mdi mdi-chevron-down"></i>
               </button>
             </div>
 
-            <div id="course2-schedule" class="weekly-schedule">
-              <div class="schedule-header">Your Weekly Schedule for SE 210</div>
+            <div id="course1-schedule" class="weekly-schedule">
+              <div class="schedule-header">Your Weekly Schedule for <span>Course code</span></div>
               <div class="schedule-row">
-                <div class="schedule-day">Tuesday</div>
-                <div class="schedule-hours">13:00-14:30 PM (Class), 3:00-5:00 PM (Office Hours)</div>
-              </div>
-              <div class="schedule-row">
-                <div class="schedule-day">Thursday</div>
-                <div class="schedule-hours">13:00-14:30 PM (Class), 3:00-6:00 PM (Lab C)</div>
-              </div>
-              <div class="schedule-row">
-                <div class="schedule-day">Sunday</div>
-                <div class="schedule-hours">Flexible time for grading (3 hours)</div>
+                <div class="schedule-day">Day</div>
+                <div class="schedule-hours"><span>Responsibility Type</span> <span>Timing</span></div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </main>
