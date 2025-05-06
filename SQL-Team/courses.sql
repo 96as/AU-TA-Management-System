@@ -40,25 +40,10 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`course_code`, `course_name`, `course_year`, `course_type`, `terms_offered`) VALUES
-('-- ___', 'General Elective I', '2004', 'Lecture', 'Fall'),
-('--- ___', 'General Elective II', '2004', 'Lecture', 'Spring'),
-('ARB 101', 'Arabic Language and Literature I', '2001', 'Lecture', 'Spring'),
 ('EE 210', 'Digital Logic Design', '2002', 'Lecture', 'Spring'),
 ('EE 210 L', 'Digital Logic Design Lab', '2002', 'Lab', 'Spring'),
 ('EE 305', 'Computer Networks', '2003', 'Lecture', 'Fall'),
 ('EE 305 L', 'Computer Networks Lab', '2003', 'Lab', 'Fall'),
-('ENG 101', 'University Writing', '2001', 'Lecture', 'Fall'),
-('ENG 222', 'Technical Writing', '2003', 'Lecture', 'Spring'),
-('ENG ___ ', 'English Elective', '2003', 'Lecture', 'Fall'),
-('ISL 101', 'Islamic Studies I', '2002', 'Lecture', 'Fall'),
-('MAT 101', 'Calculus I', '2001', 'Lecture', 'Fall'),
-('MAT 112', 'Calculus II', '2001', 'Lecture', 'Spring'),
-('MAT 212', 'Linear Algebra', '2002', 'Lecture', 'Fall'),
-('MAT 224', 'Numerical Methods', '2002', 'Lecture', 'Spring'),
-('PHU 103', 'Mechanics and Waves for Engineers', '2001', 'Lecture', 'Fall'),
-('PHU 103 L', 'Mechanics and Waves for Engineers Lab', '2001', 'Lab', 'Fall'),
-('PHU 124', 'Electromagnetism and Optics for Engineers', '2001', 'Lecture', 'Spring'),
-('PHU 124 L', 'Electromagnetism and Optics for Engineers Lab', '2001', 'Lab', 'Spring'),
 ('SE 100', 'Programming for Engineers', '2001', 'Lecture', 'Fall'),
 ('SE 100 L', 'Programming for Engineers Lab', '2001', 'Lab', 'Fall'),
 ('SE 117', 'Software Practice and Society', '2001', 'Lecture', 'Fall'),
@@ -92,7 +77,6 @@ INSERT INTO `courses` (`course_code`, `course_name`, `course_year`, `course_type
 ('SE 4__', 'Technical Elective', '2004', 'Lecture', 'Fall'),
 ('SE 4___', 'Technical Elective', '2004', 'Lecture', 'Spring'),
 ('SE 4____', 'Technical Elective', '2004', 'Lecture', 'Spring'),
-('STAT 210', 'Probability and Statistics for Engineers', '2002', 'Lecture', 'Spring');
 
 --
 -- Indexes for dumped tables
