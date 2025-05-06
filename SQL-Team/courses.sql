@@ -76,7 +76,7 @@ INSERT INTO `courses` (`course_code`, `course_name`, `course_year`, `course_type
 ('SE 4_', 'Technical Elective', '2004', 'Lecture', 'Fall'),
 ('SE 4__', 'Technical Elective', '2004', 'Lecture', 'Fall'),
 ('SE 4___', 'Technical Elective', '2004', 'Lecture', 'Spring'),
-('SE 4____', 'Technical Elective', '2004', 'Lecture', 'Spring'),
+('SE 4____', 'Technical Elective', '2004', 'Lecture', 'Spring');
 
 --
 -- Indexes for dumped tables
