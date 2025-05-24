@@ -1,0 +1,25 @@
+  /* css for tacourse */
+  .course-container {
+    margin-bottom: 40px;
+  }
+  
+  .course-header {
+    margin-bottom: 20px;
+  }
+  
+  .course-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .responsibility-card {
+    background-color: #fff;
+    border: 1px solid #e4e5e8;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+  }

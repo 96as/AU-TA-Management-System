@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TA Management System - TA Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../../css/TaMain.css">
+</head>
+<body>
+<div class="app-wrap">
+  <!-- Sidebar / Drawer -->
+  <div class="drawer drawer-rail" id="drawer">
+    <button class="drawer-toggle-btn" id="drawerToggle">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="drawer-content">
+      <div class="logo-container">
+        <img src="../../images/logo.png" alt="University Logo" class="logo">
+        <span class="only-full">TA Management</span>
+      </div>
+      <div class="divider divider-bottom-margin"></div>
+      <a href="TaMain.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-home"></i>
+        </div>
+        <span class="only-full">Dashboard</span>
+      </a>
+
+      
+      <div class="divider"></div>
+      <a href="#" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-user"></i>
+        </div>
+        <span class="only-full">Profile</span>
+      </a>
+      <a href="../login.html" class="nav-item logout">
+        <div class="nav-prepend">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <span class="only-full">Logout</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="app-inner">
+    <div class="main">
+      <div class="main-content" id="mainContent">
+        <div class="page-header">
+          <h1>TA Dashboard</h1>
+          <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li>></li>
+            <li>My Courses</li>
+          </ul>
+        </div>
+
+        <!-- Summary Panel -->
+        <div class="summary-panel">
+          <div class="summary-item">
+            <div class="summary-value">0</div>
+            <div class="summary-label">Assigned Courses</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">0</div>
+            <div class="summary-label">Total Hours</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">0</div>
+            <div class="summary-label">Marking Hours</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">0</div>
+            <div class="summary-label">Lab Supervision</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">0</div>
+            <div class="summary-label">Proctoring</div>
+          </div>
+        </div>
+
+        <h2>My Courses</h2>
+
+        <div class="text-sub" id="noCoursesMessage" style="text-align: center; margin-top: 110px; display: none;">
+          No courses assigned yet.
+        </div>
+
+        <div class="cards">
+          <!-- Course Card 1 -->
+          <div class="card" >
+            <div class="card-title">
+              <div class="d-col">
+                <div class="text-lg">Course Title</div>
+                <div class="text-sub"><span>Course Code</span> . <span>Semester</span></div>
+              </div>
+              <span class="semester-badge">Current</span>
+            </div>
+            <div class="tags">
+              <div class="tag"><span>0</span> Students</div>
+              <div class="tag">Instructor</div>
+              <div class="tag-purple">
+                <i class="fas fa-clock icon-purple"></i>
+                <span>0</span>&nbsp;Hours</div>
+            </div>
+
+            <div class="task-list">
+              <div class="task-item">
+                <div class="task-name">
+                  <i class="fas fa-clipboard-check task-icon"></i>
+                  Marking
+                </div>
+                <div class="task-hours"><span>0</span> hours</div>
+              </div>
+              <div class="task-item">
+                <div class="task-name">
+                  <i class="fas fa-eye task-icon"></i>
+                  Proctoring
+                </div>
+                <div class="task-hours"><span>0</span> hours</div>
+              </div>
+              <div class="task-item">
+                <div class="task-name">
+                  <i class="fas fa-chalkboard-teacher task-icon"></i>
+                  Lab Supervision
+                </div>
+                <div class="task-hours"><span>0</span> hours</div>
+              </div>
+            </div>
+
+            <div class="progress-container">
+              <div class="progress-info">
+                <span>Progress</span>
+                <span>0%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="date-container">
+                <i class="far fa-calendar-alt calendar-icon"></i>
+                <span class="date-text">Time Period</span>
+              </div>
+              <div class="btn-details">View Details</div>
+            </div>
+          </div>
+
+         <!-- Course Card 2 -->
+         <div class="card">
+          <div class="card-title">
+            <div class="d-col">
+              <div class="text-lg">Course Title</div>
+              <div class="text-sub"><span>Course Code</span> . <span>Semester</span></div>
+            </div>
+            <span class="semester-badge">Current</span>
+          </div>
+          <div class="tags">
+            <div class="tag"><span>0</span> Students</div>
+            <div class="tag">Instructor</div>
+            <div class="tag-purple">
+              <i class="fas fa-clock icon-purple"></i>
+              <span>0</span>&nbsp;Hours</div>
+          </div>
+
+          <div class="task-list">
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-clipboard-check task-icon"></i>
+                Marking
+              </div>
+              <div class="task-hours"><span>0</span> hours</div>
+            </div>
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-eye task-icon"></i>
+                Proctoring
+              </div>
+              <div class="task-hours"><span>0</span> hours</div>
+            </div>
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-chalkboard-teacher task-icon"></i>
+                Lab Supervision
+              </div>
+              <div class="task-hours"><span>0</span> hours</div>
+            </div>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-info">
+              <span>Progress</span>
+              <span>0%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="date-container">
+              <i class="far fa-calendar-alt calendar-icon"></i>
+              <span class="date-text">Time Period</span>
+            </div>
+            <div class="btn-details">View Details</div>
+          </div>
+        </div>
+
+         <!-- Course Card 3 -->
+         <div class="card">
+          <div class="card-title">
+            <div class="d-col">
+              <div class="text-lg">Course Title</div>
+              <div class="text-sub"><span>Course Code</span> . <span>Semester</span></div>
+            </div>
+            <span class="semester-badge">Current</span>
+          </div>
+          <div class="tags">
+            <div class="tag"><span>0</span> Students</div>
+            <div class="tag">Instructor</div>
+            <div class="tag-purple">
+              <i class="fas fa-clock icon-purple"></i>
+              <span>0</span>&nbsp;Hours</div>
+          </div>
+
+          <div class="task-list">
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-clipboard-check task-icon"></i>
+                Marking
+              </div>
+              <div class="task-hours"><span>0</span> hours</div>
+            </div>
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-eye task-icon"></i>
+                Proctoring
+              </div>
+              <div class="task-hours"><span>0</span> hours</div>
+            </div>
+            <div class="task-item">
+              <div class="task-name">
+                <i class="fas fa-chalkboard-teacher task-icon"></i>
+                Lab Supervision
+              </div>
+              <div class="task-hours"><span>0</span> hours</div>
+            </div>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-info">
+              <span>Progress</span>
+              <span>0%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <div class="date-container">
+              <i class="far fa-calendar-alt calendar-icon"></i>
+              <span class="date-text">Time Period</span>
+            </div>
+            <div class="btn-details">View Details</div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/TaMain.js"></script>
+
+</body>
+</html>

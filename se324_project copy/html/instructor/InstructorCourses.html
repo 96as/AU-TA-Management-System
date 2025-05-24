@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TA Management System - Instructor Courses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../../css/InstructorCourses.css">
+
+</head>
+
+<body>
+<div class="app-wrap">
+  <!-- Sidebar / Drawer -->
+  <div class="drawer drawer-rail" id="drawer">
+    <button class="drawer-toggle-btn" id="drawerToggle">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="drawer-content">
+      <div class="logo-container">
+        <img src="../../images/logo.png" alt="University Logo" class="logo">
+        <span class="only-full">TA Management</span>
+      </div>
+      <div class="divider divider-bottom-margin"></div>
+      <a href="InstructorMain.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-home"></i>
+        </div>
+        <span class="only-full">Dashboard</span>
+      </a>
+
+      <a href="InstructorCourses.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-book"></i>
+        </div>
+        <span class="only-full">Courses</span>
+      </a>
+
+      <a href="InstructorAssignTa.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-users"></i>
+        </div>
+        <span class="only-full">TA Management</span>
+      </a>
+
+      <a href="../Reports.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <span class="only-full">Reports</span>
+      </a>
+
+      <div class="divider"></div>
+
+      <a href="../profile.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-user"></i>
+        </div>
+        <span class="only-full">Profile</span>
+      </a>
+      <a href="../login.html" class="nav-item logout">
+        <div class="nav-prepend">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <span class="only-full">Logout</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="app-inner">
+    <div class="main">
+      <div class="main-content" id="mainContent">
+        <div class="page-header">
+          <h1>Instructor Courses</h1>
+          <ul class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li>></li>
+            <li>My Courses</li>
+          </ul>
+        </div>
+
+        <!-- Summary Panel -->
+        <div class="summary-panel">
+          <div class="summary-item">
+            <div class="summary-value">0</div>
+            <div class="summary-label">Total Courses</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">0</div>
+            <div class="summary-label">Assigned TAs</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">0</div>
+            <div class="summary-label">Total TA Hours</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-value">0</div>
+            <div class="summary-label">Total Hours of Distributed Tasks</div>
+          </div>
+        </div>
+        
+<div style="display: flex; flex-direction: row; justify-content: space-between; margin-bottom: 30px;"> <h2>My Courses</h2> <div class="btn-details" style="width: 132px;" onclick="window.location.href='file:///C:/Users/LENOVO/Desktop/TA_Assignment.html'">Manage TAs</div> </div>
+        
+
+        <div class="text-sub" id="noCoursesMessage" style="text-align: center; margin-top: 110px; display: none;">
+          No courses assigned yet.
+        </div>
+
+        <div class="cards" style="display: flex;">
+          
+            <!-- Course Card 1 -->
+          <div class="card" >
+            <div class="card-title">
+              <div class="d-col">
+                <div class="text-lg">Course Title</div>
+                <div class="text-sub"><span>Course Code</span> . <span>Semester</span></div>
+              </div>
+              <span class="semester-badge">Current</span>
+            </div>
+            <div class="tags">
+              <div class="tag"><span>0</span> Students</div>
+              <div class="tag"><span>0</span> TAs</div>
+              <div class="tag"><span>0</span> Sections</div>
+            </div>
+
+            <div class="task-list">
+                <div class="task-item" style="display: flex; flex-direction: row;">
+                  <div class="task-name">
+                    FirstTA
+                  </div>
+                  <div class="task-hours" style="display: flex; flex-direction: column; text-align: right;">
+                    <div style="text-align: left;"> <span><i class="fas fa-clipboard-check task-icon"></i>Marking: </span> <span>0 </span> <span>hours</span> </div>
+                    <div style="text-align: left;"> <span><i class="fas fa-eye task-icon"></i>Proctoring: </span> <span>0 </span> <span>hours</span> </div>
+                    <div> <span><i class="fas fa-chalkboard-teacher task-icon"></i>Lab supervision: </span> <span>0 </span> <span>hours</span> </div>
+                  </div> 
+                </div>
+                <div class="task-item" style="display: flex; flex-direction: row;">
+                  <div class="task-name">
+                    SecondTA
+                  </div>
+                  <div class="task-hours" style="display: flex; flex-direction: column; text-align: right;">
+                    <div style="text-align: left;"> <span><i class="fas fa-clipboard-check task-icon"></i>Marking: </span> <span>0 </span> <span>hours</span> </div>
+                    <div style="text-align: left;"> <span><i class="fas fa-eye task-icon"></i>Proctoring: </span> <span>0 </span> <span>hours</span> </div>
+                    <div> <span><i class="fas fa-chalkboard-teacher task-icon"></i>Lab supervision: </span> <span>0 </span> <span>hours</span> </div>
+                  </div> 
+                </div>
+              </div>  
+          </div>
+
+          <!-- Course Card 2 -->
+         <div class="card" >
+            <div class="card-title">
+              <div class="d-col">
+                <div class="text-lg">Course Title</div>
+                <div class="text-sub"><span>Course Code</span> . <span>Semester</span></div>
+              </div>
+              <span class="semester-badge">Current</span>
+            </div>
+            <div class="tags">
+              <div class="tag"><span>0</span> Students</div>
+              <div class="tag"><span>0</span> TAs</div>
+              <div class="tag"><span>0</span> Sections</div>
+            </div>
+
+            <div class="task-list">
+                <div class="task-item" style="display: flex; flex-direction: row;">
+                  <div class="task-name">
+                    FirstTA
+                  </div>
+                  <div class="task-hours" style="display: flex; flex-direction: column; text-align: right;">
+                    <div style="text-align: left;"> <span><i class="fas fa-clipboard-check task-icon"></i>Marking: </span> <span>0 </span> <span>hours</span> </div>
+                    <div style="text-align: left;"> <span><i class="fas fa-eye task-icon"></i>Proctoring: </span> <span>0 </span> <span>hours</span> </div>
+                    <div> <span><i class="fas fa-chalkboard-teacher task-icon"></i>Lab supervision: </span> <span>0 </span> <span>hours</span> </div>
+                  </div> 
+                </div>
+                <div class="task-item" style="display: flex; flex-direction: row;">
+                  <div class="task-name">
+                    SecondTA
+                  </div>
+                  <div class="task-hours" style="display: flex; flex-direction: column; text-align: right;">
+                    <div style="text-align: left;"> <span><i class="fas fa-clipboard-check task-icon"></i>Marking: </span> <span>0 </span> <span>hours</span> </div>
+                    <div style="text-align: left;"> <span><i class="fas fa-eye task-icon"></i>Proctoring: </span> <span>0 </span> <span>hours</span> </div>
+                    <div> <span><i class="fas fa-chalkboard-teacher task-icon"></i>Lab supervision: </span> <span>0 </span> <span>hours</span> </div>
+                  </div> 
+                </div>
+              </div>
+          </div>
+
+          <!-- Course Card 3 -->
+         <div class="card" >
+            <div class="card-title">
+              <div class="d-col">
+                <div class="text-lg">Course Title</div>
+                <div class="text-sub"><span>Course Code</span> . <span>Semester</span></div>
+              </div>
+              <span class="semester-badge">Current</span>
+            </div>
+            <div class="tags">
+              <div class="tag"><span>0</span> Students</div>
+              <div class="tag"><span>0</span> TAs</div>
+              <div class="tag"><span>0</span> Sections</div>
+            </div>
+
+            <div class="task-list">
+                <div class="task-item" style="display: flex; flex-direction: row;">
+                  <div class="task-name">
+                    FirstTA
+                  </div>
+                  <div class="task-hours" style="display: flex; flex-direction: column; text-align: right;">
+                  <div style="text-align: left;"> <span><i class="fas fa-clipboard-check task-icon"></i>Marking: </span> <span>0 </span> <span>hours</span> </div>
+                  <div style="text-align: left;"> <span><i class="fas fa-eye task-icon"></i>Proctoring: </span> <span>0 </span> <span>hours</span> </div>
+                  <div> <span><i class="fas fa-chalkboard-teacher task-icon"></i>Lab supervision: </span> <span>0 </span> <span>hours</span> </div>
+                </div> 
+                </div>
+                <div class="task-item" style="display: flex; flex-direction: row;">
+                  <div class="task-name">
+                    SecondTA
+                  </div>
+                  <div class="task-hours" style="display: flex; flex-direction: column; text-align: right;">
+                    <div style="text-align: left;"> <span><i class="fas fa-clipboard-check task-icon"></i>Marking: </span> <span>0 </span> <span>hours</span> </div>
+                    <div style="text-align: left;"> <span><i class="fas fa-eye task-icon"></i>Proctoring: </span> <span>0 </span> <span>hours</span> </div>
+                    <div> <span><i class="fas fa-chalkboard-teacher task-icon"></i>Lab supervision: </span> <span>0 </span> <span>hours</span> </div>
+                  </div>  
+                </div>
+              </div>
+            </div>
+
+<script src="../../js/InstructorCourses.js"></script>
+
+</body>
+</html>

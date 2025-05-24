@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TA Management System - Instructor Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/MainPages.css">
+
+</head>
+<body>
+<div class="app-wrap">
+  <div class="drawer drawer-rail" id="sidebar">
+    <div class="drawer-content">
+      <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <img src="../../images/logo.png" alt="logo" class="logo">
+        <span class="only-full university-name">Alfaisal University</span>
+      </div>
+
+      <div class="divider divider-bottom-margin"></div>
+
+      <a href="InstructorMain.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-home"></i>
+        </div>
+        <span class="only-full">Dashboard</span>
+      </a>
+
+      <a href="InstructorCourses.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-book"></i>
+        </div>
+        <span class="only-full">Courses</span>
+      </a>
+
+      <a href="InstructorAssignTa.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-users"></i>
+        </div>
+        <span class="only-full">TA Management</span>
+      </a>
+
+      <a href="../Reports.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <span class="only-full">Reports</span>
+      </a>
+
+      <div class="divider"></div>
+
+      <a href="../profile.html" class="nav-item">
+        <div class="nav-prepend">
+          <i class="mdi mdi-account-circle"></i>
+        </div>
+        <span class="only-full">Profile</span>
+      </a>
+      <a href="../login.html" class="nav-item logout">
+        <div class="nav-prepend">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <span class="only-full">Logout</span>
+      </a>
+    </div>
+
+    <button class="drawer-toggle-btn" id="sidebarToggle">
+      <i class="fas fa-chevron-right" id="toggleIcon"></i>
+    </button>
+  </div>
+
+  <div class="main">
+    <div class="main-content">
+      <div class="page-header">
+        <h1>Instructor Dashboard</h1>
+      </div>
+
+      <div class="stats-section">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-book"></i></div>
+          <div class="stat-value">0</div>
+          <div class="stat-label">Total Courses</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-users"></i></div>
+          <div class="stat-value">0</div>
+          <div class="stat-label">Assigned TAs</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fas fa-clock"></i></div>
+          <div class="stat-value">0</div>
+          <div class="stat-label">Total TA Hours</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon"><i class="fas fa-clock"></i></div>
+            <div class="stat-value">0</div>
+            <div class="stat-label">Total Hours of Distributed Tasks</div>
+          </div>
+
+      </div>
+
+      <div class="section-title">Quick Access</div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">
+            <div class="d-col">
+              <span class="text-lg">My Courses</span>
+              <span class="text-sub">View Courses and TAs</span>
+            </div>
+          </div>
+          <div class="tags">
+            <span class="tag"><i class="fas fa-eye"></i> View Assigned Course</span>
+            <span class="tag"><i class="fas fa-clock"></i> View TA Hours</span>
+          </div>
+
+          <div class="card-footer">
+            <a href="InstructorCourses.html" class="btn-details">Go to Courses</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <div class="d-col">
+              <span class="text-lg">Distribute TA Hours</span>
+              <span class="text-sub">Distribute TA Hours based on Tasks</span>
+            </div> 
+          </div>
+          <div class="tags">
+            <span class="tag"><i class="fas fa-tasks"></i> Distribute Hours</span>
+          </div>
+          <div class="card-footer">
+            <a href="Manage_TA_Tasks.html" class="btn-details">Manage TAs</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <div class="d-col">
+              <span class="text-lg">Reports</span>
+              <span class="text-sub">View system reports and analytics</span>
+            </div>
+          </div>
+          <div class="tags">
+            <span class="tag"><i class="fas fa-chart-bar"></i> TA Workload</span>
+            <span class="tag"><i class="fas fa-tasks"></i> Task Distribution</span>
+          </div>
+          <div class="card-footer">
+            <a href="reports.html" class="btn-details">View Reports</a>
+          </div>
+        </div>
+      </div>
+
+          <!-- The forms to be used later to add stuff (the top one with no recent acctivitties aint as good :P)
+          <li class="activity-item">
+            <div class="activity-icon">
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="activity-content">
+              <div class="activity-title">New course SE312 Operating Systems created</div>
+              <div class="activity-time">Today, 10:45 AM</div>
+            </div>
+          </li>
+
+          <li class="activity-item">
+            <div class="activity-icon">
+              <i class="fas fa-user-plus"></i>
+            </div>
+            <div class="activity-content">
+              <div class="activity-title">Mohamad Deri added as TA</div>
+              <div class="activity-time">Yesterday, 2:30 PM</div>
+            </div>
+          </li>
+
+          <li class="activity-item">
+            <div class="activity-icon">
+              <i class="fas fa-link"></i>
+            </div>
+            <div class="activity-content">
+              <div class="activity-title">TA assigned to course SE314 Software Engineering</div>
+              <div class="activity-time">Apr 15, 2025, 11:20 AM</div>
+            </div>
+          </li>
+
+          <li class="activity-item">
+            <div class="activity-icon">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <div class="activity-content">
+              <div class="activity-title">Tasks distributed for SE100 Introduction to Programming</div>
+              <div class="activity-time">Apr 14, 2025, 9:15 AM</div>
+            </div>
+          </li>  -->
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/drawer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../css/login.css">
+<html>
+<head>
+
+</head>
+<body id="signin">
+  <main>
+    <div id="app">
+      <div class="container">
+        <div id="signinBox">
+          <div class="row">
+            <img src="../images/logo.png" id="logo" class="img-fluid mx-auto d-block"/>
+            <div>
+              <h3 id="title">TA Management System</h3>
+              <form method="POST" action="../php/login.php">
+                <div class="form-group row">
+                  <div class="input-wrapper">
+                    <span class="input-icon">&#128100;</span> <!-- 👤 icon -->
+                    <input id="username" type="text" name="username" placeholder="Your Alfaisal email ID.">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="input-wrapper">
+                    <span class="input-icon">&#128274;</span> <!-- 🔒 icon -->
+                    <input id="password" type="password" name="password" placeholder="Your Alfaisal email password.">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div style="margin-top: 10px;">
+                    <button type="submit" class="btn" id="btn-signin">
+                      Sign In
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="../js/login.js"></script>
+</body>
+</html>
